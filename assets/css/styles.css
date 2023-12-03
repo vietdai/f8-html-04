@@ -1,6 +1,9 @@
 * {
   box-sizing: border-box;
 }
+:root {
+  --primary-color: #ff5b2e;
+}
 html,
 body {
   scroll-behavior: smooth;
@@ -11,16 +14,38 @@ html {
 body {
   font-family: "Poppins", sans-serif;
   font-size: 1.6rem;
+  background-color: #fffaf5;
 }
 /* Common */
 .container {
-  width: calc(100% - 270px);
+  width: 1170px;
   max-width: calc(100% - 48px);
   margin: 0 auto;
 }
 a {
   display: inline-block;
   text-decoration: none;
+  transition: all 0.25s linear;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Sora", sans-serif;
+}
+.section__heading {
+  color: #000958;
+  font-size: 5.2rem;
+  font-weight: 700;
+  line-height: 1.19; /* 119.231% */
+}
+.section__desc {
+  color: #656689;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.87; /* 187.5% */
 }
 /* HEADER */
 .header {
@@ -62,6 +87,10 @@ a {
   border: 1px solid #000958;
   opacity: 0.7;
 }
+.header-top__action:hover {
+  opacity: 1;
+}
+
 /* Hero */
 .hero {
   margin-top: 50px;
@@ -109,7 +138,6 @@ a {
 
 .hero-heading {
   color: #000958;
-  font-family: "Sora", sans-serif;
   font-size: 6.6rem;
   font-weight: 800;
   line-height: 1.15; /* 115.152% */
@@ -135,8 +163,11 @@ a {
   line-height: 1; /* 100% */
   padding: 22px 30px;
   border-radius: 31px;
-  background: #ff5b2e;
+  background: var(--primary-color);
   box-shadow: 0px 13px 26px -8px rgba(255, 91, 46, 0.42);
+}
+.hero-btn:hover {
+  opacity: 0.9;
 }
 .hero-btn i {
   display: flex;
@@ -145,7 +176,7 @@ a {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  color: #ff5b2e;
+  color: var(--primary-color);
   background-color: #fff;
   font-size: 0.8rem;
   border: 1px solid;
@@ -159,4 +190,132 @@ a {
   line-height: 16px; /* 100% */
   text-decoration-line: underline;
   margin-left: 24px;
+}
+
+/* About  */
+.about {
+  padding: 53px 0;
+}
+.about__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  row-gap: 146px;
+}
+.about__content {
+}
+.about__label {
+}
+.about__heading {
+  max-width: 446px;
+  margin-top: 15px;
+}
+.about__desc {
+  margin-top: 24px;
+  max-width: 431px;
+}
+.about__check-list {
+  display: grid;
+  justify-content: flex-start;
+  grid-template-columns: auto auto;
+  gap: 40px 36px;
+  align-items: center;
+  margin-top: 54px;
+}
+.about__check-item {
+  color: #48496a;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1; /* 100% */
+  position: relative;
+  column-gap: 10px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  margin-left: 34px;
+}
+.about__check-item::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  left: -34px;
+
+  background: var(--primary-color);
+  box-shadow: 0px 4px 15px -3px rgba(255, 93, 49, 0.69);
+}
+.about__check-item::after {
+  content: "";
+  height: 7px;
+  width: 11px;
+  position: absolute;
+  border: 3px solid;
+  border-color: transparent transparent #fff #fff;
+  rotate: -45deg;
+  bottom: 6px;
+  left: -30px;
+  border-radius: 3px;
+}
+.about__media {
+  display: flex;
+}
+.about__media--box {
+  position: relative;
+  width: 136px;
+  height: 156px;
+  border-radius: 10px;
+  padding: 31px 26px 29px;
+  background: #5bd6e2;
+  box-shadow: -15px 26px 48px 0px rgba(85, 240, 255, 0.17);
+  margin-top: 165px;
+}
+.about__media--box::after {
+  right: -32px;
+  top: -39px;
+  position: absolute;
+  content: url(/assets/img/about-media-box.svg);
+}
+.about__box--number {
+  color: #fff;
+  text-align: center;
+  font-size: 4.2rem;
+  font-weight: 700;
+  line-height: 1; /* 100% */
+}
+.about__box--times {
+  width: 83px;
+  color: #c6f4f9;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.42; /* 142.857% */
+  margin-top: 14px;
+}
+.about__media--images {
+  position: relative;
+  margin-left: -44px;
+}
+.about__media--images img {
+  margin-left: 23px;
+}
+.about__media--images::before {
+  content: url(/assets/img/about-img-decor.svg);
+  position: absolute;
+  top: 157px;
+  right: -50px;
+  z-index: -2;
+}
+.about__media--images::after {
+  content: "";
+  position: absolute;
+  width: 494px;
+  height: 336px;
+  border-radius: 16px;
+  background: linear-gradient(180deg, #fce0ef 0%, #fac3d1 100%);
+  box-shadow: 11px 18px 65px 0px rgba(255, 155, 121, 0.12);
+  bottom: 0;
+  left: 0;
+  z-index: -1;
 }

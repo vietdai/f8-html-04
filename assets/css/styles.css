@@ -206,11 +206,11 @@ h6 {
 }
 .about__label {
 }
-.about__heading {
+.about__heading1 {
   max-width: 446px;
   margin-top: 15px;
 }
-.about__desc {
+.about__desc1 {
   margin-top: 24px;
   max-width: 431px;
 }
@@ -293,21 +293,21 @@ h6 {
   line-height: 1.42; /* 142.857% */
   margin-top: 14px;
 }
-.about__media--images {
+.about__media--images1 {
   position: relative;
   margin-left: -44px;
 }
-.about__media--images img {
+.about__media--images1 img {
   margin-left: 23px;
 }
-.about__media--images::before {
+.about__media--images1::before {
   content: url(/assets/img/about-img-decor.svg);
   position: absolute;
   top: 157px;
   right: -50px;
   z-index: -2;
 }
-.about__media--images::after {
+.about__media--images1::after {
   content: "";
   position: absolute;
   width: 494px;
@@ -318,4 +318,79 @@ h6 {
   bottom: 0;
   left: 0;
   z-index: -1;
+}
+.about__media--images2 {
+  position: relative;
+}
+.about__media--images2::after {
+  content: "";
+  position: absolute;
+  width: 458px;
+  height: 500px;
+  border-radius: 18px;
+  border: 2px solid #fff;
+  background: linear-gradient(180deg, #c6e2fa 0%, #94c2ea 100%);
+  box-shadow: 0px 17px 77px -8px rgba(190, 165, 139, 0.17);
+  left: 0;
+  z-index: -1;
+}
+.about__media--images2::before {
+  content: url(/assets/img/about-media2-decor.svg);
+  position: absolute;
+  bottom: -55px;
+  right: -42px;
+}
+.about__heading2 {
+  max-width: 543px;
+}
+.about__desc2 {
+  max-width: 511px;
+  margin-top: 24px;
+}
+.about__content--list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid rgba(255, 91, 46, 0.07);
+  margin-top: 44px;
+}
+.about__item--logo {
+}
+.about__content--item {
+  color: #48496a;
+  font-family: "Sora", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1; /* 100% */
+  padding: 11px 5px;
+}
+.about__content--item:hover {
+  color: var(--primary-color);
+}
+.about__content--item i {
+  margin-right: 11px;
+}
+.fa-color1 {
+  color: #4c9ee2;
+}
+.fa-color2 {
+  color: #ff5b2e;
+}
+.fa-color3 {
+  color: #fabf3e;
+}
+.about__content--info {
+  color: #656689;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.71; /* 171.429% */
+  margin-top: 25px;
+}
+.about__content--link {
+  color: var(--primary-color);
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1; /* 100% */
+  border-bottom: 1.5px solid var(--primary-color);
+  margin-top: 32px;
 }
